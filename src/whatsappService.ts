@@ -15,8 +15,7 @@ async function sendWhatsAppMessage(accountSid: string, authToken: string, toNumb
 			},
 			body: data,
 		});
-		const resp = await res.json();
-		return resp;
+		return await res.json();
 	} catch (error) {
 		console.log(error);
 	}
